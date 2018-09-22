@@ -4,11 +4,11 @@
     using System;
 
     [TestClass]
-    public class EnemyShipTesting
+    public class Run
     {
 
         [TestMethod]
-        public void RunDemo()
+        public void RunFactoryPattern()
         {
 
             // Create the factory object

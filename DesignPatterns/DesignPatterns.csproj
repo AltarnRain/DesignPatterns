@@ -41,13 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\Run.cs" />
     <Compile Include="Factory\BigUFOEnemy.cs" />
     <Compile Include="Factory\EnemyShip.cs" />
     <Compile Include="Factory\EnemyShipFactory.cs" />
     <Compile Include="Factory\RocketEnemyShip.cs" />
     <Compile Include="Factory\Run.cs" />
     <Compile Include="Factory\UFOEmenyShip.cs" />
+    <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Observer\Run.cs" />
+    <Compile Include="Observer\ISubject.cs" />
+    <Compile Include="Observer\StockGrabber.cs" />
+    <Compile Include="Observer\StockObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleTon\Run.cs" />
     <Compile Include="Stategy\Animal.cs" />
     <Compile Include="Stategy\Run.cs" />
     <Compile Include="Stategy\Bird.cs" />

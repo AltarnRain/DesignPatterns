@@ -7,7 +7,7 @@ namespace DesignPaterns.Strategy
     public class Run
     {
         [TestMethod]
-        public void RunDemo()
+        public void RunStrategyPattern()
         {
             var sparky = new Dog();
             var tweety = new Bird();
