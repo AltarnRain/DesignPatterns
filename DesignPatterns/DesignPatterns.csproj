@@ -55,6 +55,7 @@
     <Compile Include="Observer\StockObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleTon\Run.cs" />
+    <Compile Include="SingleTon\Singleton.cs" />
     <Compile Include="Stategy\Animal.cs" />
     <Compile Include="Stategy\Run.cs" />
     <Compile Include="Stategy\Bird.cs" />
