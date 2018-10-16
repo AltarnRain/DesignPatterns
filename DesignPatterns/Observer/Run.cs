@@ -1,15 +1,20 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="Run.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
 namespace DesignPaterns.Observer
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// Runs the Observer pattern tutorial code.
+    /// </summary>
     [TestClass]
     public class Run
     {
+        /// <summary>
+        /// Runs the observer pattern.
+        /// </summary>
         [TestMethod]
         public void RunObserverPattern()
         {
@@ -31,8 +36,6 @@ namespace DesignPaterns.Observer
             stockGrabber.IbmPrice = 197.00;
             stockGrabber.AaplPrice = 677.60;
             stockGrabber.GoogPrice = 676.40;
-
-
         }
     }
 }

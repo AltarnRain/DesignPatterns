@@ -1,12 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Threading.Tasks;
+﻿// <copyright file="Run.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
 namespace DesignPaterns.SingleTon
 {
+    using System;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// Runs the Singleton design pattern tuturial
+    /// </summary>
     [TestClass]
     public class Run
     {
+        /// <summary>
+        /// Runs the singleton in a single thread.
+        /// </summary>
         [TestMethod]
         public void RunSingletonSingleThread()
         {
@@ -34,36 +43,6 @@ namespace DesignPaterns.SingleTon
 
             Console.WriteLine($"Remaining letters {singleTon.GetLetterList().Count}");
             singleTon.GetLetterList().ForEach(l => Console.WriteLine(l));
-        }
-
-        [TestMethod]
-        public void RunSingletonMultiThread()
-        {
-            var singleTon = Singleton.GetInstance();
-
-            Task getTiles = GetTiles();
-            Task getTilesAgain = GetTiles();
-
-            getTiles.Start();
-            getTilesAgain.Start();
-
-            getTiles.Wait();
-            getTilesAgain.Wait();
-        }
-
-        private Task GetTiles()
-        {
-            return new Task(() =>
-            {
-                var singleTon = Singleton.GetInstance();
-
-                var playerOneTiles = singleTon.GetTiles(7);
-
-                Console.WriteLine();
-                Console.WriteLine("Player one tiles");
-
-                playerOneTiles.ForEach(l => Console.WriteLine(l));
-            });
         }
     }
 }

@@ -1,14 +1,19 @@
-﻿namespace DesignPaterns.Factory
-{
-    // This is a factory thats only job is creating ships
-    // By encapsulating ship creation, we only have one
-    // place to make modifications
+﻿// <copyright file="EnemyShipFactory.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
+namespace DesignPaterns.Factory
+{
+    /// <summary>
+    /// A factory class that makes enemy ships
+    /// </summary>
     public class EnemyShipFactory
     {
-        // This could be used as a static method if we
-        // are willing to give up subclassing it
-
+        /// <summary>
+        /// Makes the enemy ship.
+        /// </summary>
+        /// <param name="newShipType">New type of the ship.</param>
+        /// <returns>An enemy ship</returns>
         public EnemyShip MakeEnemyShip(string newShipType)
         {
             if (newShipType.Equals("U"))

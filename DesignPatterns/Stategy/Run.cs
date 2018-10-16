@@ -1,11 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿// <copyright file="Run.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
 namespace DesignPaterns.Strategy
 {
+    using System;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    /// <summary>
+    /// Runs the strategy pattern.
+    /// </summary>
     [TestClass]
     public class Run
     {
+        /// <summary>
+        /// Runs the strategy pattern.
+        /// </summary>
         [TestMethod]
         public void RunStrategyPattern()
         {
@@ -20,5 +30,5 @@ namespace DesignPaterns.Strategy
 
             Console.WriteLine("Dog: " + sparky.TryToFly());
         }
-    } 
+    }
 }

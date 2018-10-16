@@ -1,31 +1,54 @@
-﻿using System;
+﻿// <copyright file="EnemyShip.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
 namespace DesignPaterns.Factory
 {
+    using System;
+
+    /// <summary>
+    /// An abstract repentation of an enemy ship
+    /// </summary>
     public abstract class EnemyShip
     {
-        private string name;
-        private double amtDamage;
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name { get; set; }
 
-        public string GetName() { return name; }
-        public void SetName(string newName) { name = newName; }
+        /// <summary>
+        /// Gets or sets the damage.
+        /// </summary>
+        /// <value>
+        /// The damage.
+        /// </value>
+        public double Damage { get; set; }
 
-        public double GetDamage() { return amtDamage; }
-        public void SetDamage(double newDamage) { amtDamage = newDamage; }
-
+        /// <summary>
+        /// Follows the hero ship.
+        /// </summary>
         public void FollowHeroShip()
         {
-            Console.WriteLine(GetName() + " is following the hero");
+            Console.WriteLine(this.Name + " is following the hero");
         }
 
+        /// <summary>
+        /// Displays the enemy ship.
+        /// </summary>
         public void DisplayEnemyShip()
         {
-            Console.WriteLine(GetName() + " is on the screen");
+            Console.WriteLine(this.Name + " is on the screen");
         }
 
+        /// <summary>
+        /// Enemies the ship shoots.
+        /// </summary>
         public void EnemyShipShoots()
         {
-            Console.WriteLine(GetName() + " attacks and does " + GetDamage() + " damage to hero");
+            Console.WriteLine(this.Name + " attacks and does " + this.Damage + " damage to hero");
         }
-    } 
+    }
 }

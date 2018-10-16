@@ -1,19 +1,42 @@
-﻿using System;
+﻿// <copyright file="Animal.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
 namespace DesignPaterns.Strategy
 {
+    using System;
+
+    /// <summary>
+    /// The base animal class
+    /// </summary>
     public class Animal
     {
-        public string Name { get; set; }
-        public double Height { get; set; }
-        public string FavFood { get; set; }
-        public double Speed { get; set; }
+        /// <summary>
+        /// The weight
+        /// </summary>
+        private int weight;
+
+        /// <summary>
+        /// Gets or sets the sound.
+        /// </summary>
+        /// <value>
+        /// The sound.
+        /// </value>
         public string Sound { get; set; }
 
-        private int weight;
+        /// <summary>
+        /// Gets or sets the weight.
+        /// </summary>
+        /// <value>
+        /// The weight.
+        /// </value>
         public int Weight
         {
-            get { return this.weight; }
+            get
+            {
+                return this.weight;
+            }
+
             set
             {
                 if (value > 0)
@@ -27,27 +50,21 @@ namespace DesignPaterns.Strategy
             }
         }
 
-        // Instead of using an interface in a traditional way
-        // we use an instance variable that is a subclass
-        // of the Flys interface.
-
-        // Animal doesn't care what flyingType does, it just
-        // knows the behavior is available to its subclasses
-
-        // This is known as Composition : Instead of inheriting
-        // an ability through inheritance the class is composed
-        // with Objects with the right ability
-
-        // Composition allows you to change the capabilities of 
-        // objects at run time!
-
+        /// <summary>
+        /// Gets or sets the type of the flying.
+        /// </summary>
+        /// <value>
+        /// The type of the flying.
+        /// </value>
         public IFlys FlyingType { get; set; }
 
-
-        // Animal pushes off the responsibility for flying to flyingType
+        /// <summary>
+        /// Tries to fly.
+        /// </summary>
+        /// <returns>The result of the flight attempt</returns>
         public string TryToFly()
         {
-            return FlyingType.Fly();
+            return this.FlyingType.Fly();
         }
     }
 }

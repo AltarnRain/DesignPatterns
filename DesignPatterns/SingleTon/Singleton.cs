@@ -1,16 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿// <copyright file="Singleton.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
 
 namespace DesignPaterns.SingleTon
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading;
+
+    /// <summary>
+    /// A class demontrating the Singleton pattern.
+    /// </summary>
     public class Singleton
     {
+        /// <summary>
+        /// The first thread
+        /// </summary>
+        private static bool firstThread = true;
+
+        /// <summary>
+        /// A reference to the singleton class.
+        /// </summary>
         private static Singleton singleton = null;
 
+        /// <summary>
+        /// The instance count
+        /// </summary>
         private static int instanceCount = 0;
 
+        /// <summary>
+        /// The letters
+        /// </summary>
         private readonly List<string> letters = new List<string>
         {
              "a", "a", "a", "a", "a", "a", "a", "a", "a",
@@ -23,13 +44,20 @@ namespace DesignPaterns.SingleTon
             "u", "u", "u", "v", "v", "w", "w", "x", "y", "y", "z"
         };
 
-        private static bool firstThread = true;
-
+        /// <summary>
+        /// Prevents a default instance of the <see cref="Singleton"/> class from being created.
+        /// </summary>
         private Singleton()
         {
             // no implementation.
         }
 
+        /// <summary>
+        /// Gets the instance of <see cref="Singleton" />
+        /// </summary>
+        /// <returns>
+        /// The same instance of singleton
+        /// </returns>
         public static Singleton GetInstance()
         {
             if (singleton == null)
@@ -48,19 +76,24 @@ namespace DesignPaterns.SingleTon
             return singleton;
         }
 
-        public int InstanceCount
-        {
-            get
-            {
-                return instanceCount;
-            }
-        }
-
+        /// <summary>
+        /// Gets the letter list.
+        /// </summary>
+        /// <returns>
+        /// The letters
+        /// </returns>
         public List<string> GetLetterList()
         {
-            return letters;
+            return this.letters;
         }
 
+        /// <summary>
+        /// Gets the tiles.
+        /// </summary>
+        /// <param name="howManyTiles">The how many tiles.</param>
+        /// <returns>
+        /// A random selection of tiles from letters
+        /// </returns>
         public List<string> GetTiles(int howManyTiles)
         {
             var returnValue = new List<string>();
@@ -72,10 +105,10 @@ namespace DesignPaterns.SingleTon
 
             for (var i = 0; i < howManyTiles; i++)
             {
-                var randomTile = randomTilePicker.Next(0, letters.Count - 1);
-                var letter = letters.ElementAt(randomTile);
+                var randomTile = randomTilePicker.Next(0, this.letters.Count - 1);
+                var letter = this.letters.ElementAt(randomTile);
                 returnValue.Add(letter);
-                letters.RemoveAt(randomTile);
+                this.letters.RemoveAt(randomTile);
             }
 
             return returnValue;

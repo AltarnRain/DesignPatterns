@@ -1,4 +1,8 @@
-﻿namespace DesignPaterns.Strategy
+﻿// <copyright file="Flys.cs" company="Onno Invernizzi">
+// Copyright (c) Onno Invernizzi. All rights reserved.
+// </copyright>
+
+namespace DesignPaterns.Strategy
 {
     // The interface is implemented by many other
     // subclasses that allow for many types of flying
