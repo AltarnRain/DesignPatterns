@@ -60,6 +60,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Builder\IRobotPlan.cs" />
     <Compile Include="Builder\Run.cs" />
+    <Compile Include="Prototype\CloneableBase.cs" />
+    <Compile Include="Prototype\CloneFactory.cs" />
+    <Compile Include="Prototype\Run.cs" />
+    <Compile Include="Prototype\Sheep.cs" />
     <Compile Include="SingleTon\Run.cs" />
     <Compile Include="SingleTon\Singleton.cs" />
     <Compile Include="Stategy\Animal.cs" />
