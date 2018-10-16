@@ -1,4 +1,4 @@
-﻿// <copyright file="BigUFOEnemy.cs" company="Onno Invernizzi">
+﻿// <copyright file="BigUFOEnemyShip.cs" company="Onno Invernizzi">
 // Copyright (c) Onno Invernizzi. All rights reserved.
 // </copyright>
 
@@ -15,8 +15,8 @@ namespace DesignPaterns.Factory
         /// </summary>
         public BigUFOEnemyShip()
         {
-            this.SetName("Big UFO Enemy Ship");
-            this.SetDamage(40.0);
+            this.Name = "Big UFO Enemy Ship";
+            this.Damage = 40.0;
         }
     }
 }

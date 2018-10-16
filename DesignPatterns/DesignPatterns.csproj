@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder\IRobotBuilder.cs" />
+    <Compile Include="Builder\OldRobotBuilder.cs" />
+    <Compile Include="Builder\Robot.cs" />
+    <Compile Include="Builder\RobotEngineer.cs" />
     <Compile Include="Factory\BigUFOEnemyShip.cs" />
     <Compile Include="Factory\EnemyShip.cs" />
     <Compile Include="Factory\EnemyShipFactory.cs" />
@@ -54,12 +58,14 @@
     <Compile Include="Observer\StockGrabber.cs" />
     <Compile Include="Observer\StockObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingleTon\Builder\IRobotPlan.cs" />
-    <Compile Include="SingleTon\Builder\Run.cs" />
+    <Compile Include="Builder\IRobotPlan.cs" />
+    <Compile Include="Builder\Run.cs" />
     <Compile Include="SingleTon\Run.cs" />
     <Compile Include="SingleTon\Singleton.cs" />
     <Compile Include="Stategy\Animal.cs" />
+    <Compile Include="Stategy\CantFly.cs" />
     <Compile Include="Stategy\IFlys.cs" />
+    <Compile Include="Stategy\ItFlys.cs" />
     <Compile Include="Stategy\Run.cs" />
     <Compile Include="Stategy\Bird.cs" />
     <Compile Include="Stategy\Dog.cs" />

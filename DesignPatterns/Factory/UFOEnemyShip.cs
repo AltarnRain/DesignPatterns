@@ -1,4 +1,4 @@
-﻿// <copyright file="UFOEmenyShip.cs" company="Onno Invernizzi">
+﻿// <copyright file="UFOEnemyShip.cs" company="Onno Invernizzi">
 // Copyright (c) Onno Invernizzi. All rights reserved.
 // </copyright>
 
