@@ -46,6 +46,16 @@
     <Compile Include="Builder\OldRobotBuilder.cs" />
     <Compile Include="Builder\Robot.cs" />
     <Compile Include="Builder\RobotEngineer.cs" />
+    <Compile Include="Decorator\Commander\DeviceButton.cs" />
+    <Compile Include="Decorator\Commander\ICommand.cs" />
+    <Compile Include="Decorator\Commander\IElectronicDevice.cs" />
+    <Compile Include="Decorator\Commander\Run.cs" />
+    <Compile Include="Decorator\Commander\Television.cs" />
+    <Compile Include="Decorator\Commander\TurnTVDown.cs" />
+    <Compile Include="Decorator\Commander\TurnTVOff.cs" />
+    <Compile Include="Decorator\Commander\TurnTVOn.cs" />
+    <Compile Include="Decorator\Commander\TurnTVUp.cs" />
+    <Compile Include="Decorator\Commander\TVRemote.cs" />
     <Compile Include="Decorator\IPizza.cs" />
     <Compile Include="Decorator\Mozzerella.cs" />
     <Compile Include="Decorator\PlainPizza.cs" />
