@@ -24,7 +24,7 @@ namespace DesignPaterns.Decorator
         /// <value>
         /// The description.
         /// </value>
-        public string Description => this.Pizza.Description;
+        public virtual string Description => this.Pizza.Description;
 
         /// <summary>
         /// Gets the price.
@@ -32,13 +32,13 @@ namespace DesignPaterns.Decorator
         /// <value>
         /// The price.
         /// </value>
-        public double Price => this.Pizza.Price;
+        public virtual double Price => this.Pizza.Price;
 
         /// <summary>
-        /// Gets or sets the temporary pizza
+        /// Gets or sets the pizza
         /// </summary>
         /// <value>
-        /// The temporary pizza.
+        /// The pizza.
         /// </value>
         protected IPizza Pizza { get; set; }
     }

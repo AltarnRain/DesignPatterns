@@ -18,9 +18,7 @@ namespace DesignPaterns.Decorator
         [TestMethod]
         public void RunDecoratorPattern()
         {
-            var pizza = new PlainPizza();
-            var moz = new Mozzerella(pizza);
-            var basicPizza = new TomatoSauce(moz);
+            var basicPizza = new Mozzerella(new TomatoSauce(new PlainPizza()));
 
             System.Console.WriteLine(basicPizza.Description);
             System.Console.WriteLine(basicPizza.Price);

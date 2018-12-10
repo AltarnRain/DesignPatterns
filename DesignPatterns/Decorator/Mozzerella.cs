@@ -28,7 +28,7 @@ namespace DesignPaterns.Decorator
         /// <value>
         /// The description.
         /// </value>
-        public new string Description
+        public override string Description
         {
             get
             {
@@ -42,7 +42,7 @@ namespace DesignPaterns.Decorator
         /// <value>
         /// The cost.
         /// </value>
-        public new double Price
+        public override double Price
         {
             get
             {

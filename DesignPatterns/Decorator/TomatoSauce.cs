@@ -27,11 +27,11 @@ namespace DesignPaterns.Decorator
         /// <value>
         /// The description.
         /// </value>
-        public new string Description
+        public override string Description
         {
             get
             {
-                return this.Pizza.Description + ", Mozzerella";
+                return this.Pizza.Description + ", sauce";
             }
         }
 
@@ -41,11 +41,11 @@ namespace DesignPaterns.Decorator
         /// <value>
         /// The cost.
         /// </value>
-        public new double Price
+        public override double Price
         {
             get
             {
-                return this.Pizza.Price + 0.50;
+                return this.Pizza.Price + 0.35;
             }
         }
     }
