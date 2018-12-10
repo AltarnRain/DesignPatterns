@@ -46,6 +46,12 @@
     <Compile Include="Builder\OldRobotBuilder.cs" />
     <Compile Include="Builder\Robot.cs" />
     <Compile Include="Builder\RobotEngineer.cs" />
+    <Compile Include="Decorator\IPizza.cs" />
+    <Compile Include="Decorator\Mozzerella.cs" />
+    <Compile Include="Decorator\PlainPizza.cs" />
+    <Compile Include="Decorator\Run.cs" />
+    <Compile Include="Decorator\TomatoSauce.cs" />
+    <Compile Include="Decorator\ToppingDecorator.cs" />
     <Compile Include="Factory\BigUFOEnemyShip.cs" />
     <Compile Include="Factory\EnemyShip.cs" />
     <Compile Include="Factory\EnemyShipFactory.cs" />
